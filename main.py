@@ -25,7 +25,7 @@ def sndimg2clpbrd(img):
 	imgbytes = io.BytesIO()
 	img.save(imgbytes, format="PNG")
 	process = subprocess.Popen(
-		["xclip", "-selection", "clipboard", "-t", "img/png"], 
+		["xclip", "-selection", "clipboard", "-t", "image/png"], 
 		stdin=subprocess.PIPE
 	)
 	process.communicate(input=imgbytes.getvalue())
